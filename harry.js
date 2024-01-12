@@ -1,7 +1,8 @@
 $(() => {
 
-
     const API_URL="https://api.potterdb.com";
+
+    
 
     const getData = async (url) => {
         try {
@@ -14,9 +15,9 @@ $(() => {
         } catch (error) {
             console.log("Error data REQUEST:"+ error);
         }
-    };
+    }
     
-    getData(API_URL+"/v1/books");
+    getData(API_URL+"/v1/characters");
     
     
 
