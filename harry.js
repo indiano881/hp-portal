@@ -33,10 +33,12 @@ $(() => {
         $(moviesArray).map((index, movie)=> {
             let posterImage= movie.attributes.poster;
             let titleMovie= movie.attributes.title;
+            let releaseDate= movie.attributes.release_date;
             $(".grid-container").append(`
             <div class="grid-item">
                 <img src=${posterImage} id="picture${index}">
                 <h3>${titleMovie}</h3>
+                <h4>Released: ${releaseDate}</h4>
             </div>
             `)
         })
@@ -47,11 +49,13 @@ $(() => {
         $(spellsArray).map((index, spell)=> {
             let spellImage= spell.attributes.image;
             let spellName= spell.attributes.name;
+            let spellEffect=spell.attributes.effect;
             if (spellImage){
                 $(".grid-container").append(`
                 <div class="grid-item">
                     <img src=${spellImage} id="picture${index}">
                     <h3>${spellName}</h3>
+                    <h4>Effect: ${spellEffect}</h4>
                 </div>
                 `)
             } else {
@@ -59,6 +63,7 @@ $(() => {
                 <div class="grid-item">
                     <img src="./images/magic.jpg" id="picture${index}">
                     <h3>${spellName}</h3>
+                    <h4>Effect: ${spellEffect}</h4>
                 </div>
                 `)
             }

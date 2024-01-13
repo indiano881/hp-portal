@@ -44,7 +44,12 @@ button {
     border: var(--border-tycker);
     border-radius: var(--sizing-standard);
     background-color: var(--terziary-color);
+    font-size: calc(1rem + 1vw);
     padding: var(--sizing-small);
+}
+button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 
@@ -53,7 +58,6 @@ section {
 }
 
 .grid-container {
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
