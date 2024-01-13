@@ -36,9 +36,17 @@ $(() => {
         let spellsArray=spells.data;
         $(spellsArray).map((index, spell)=> {
             let spellImage= spell.attributes.image;//imagine cover
-            $(".grid-container").append(`
-            <img src=${spellImage} id="picture${index}">
-            `)
+
+            if (spellImage){
+                $(".grid-container").append(`
+                <img src=${spellImage} id="picture${index}">
+                `)
+            } else {
+                $(".grid-container").append(`<img src="./images/magic.jpg" >`)
+            }
+            
+
+            
         })
     }
 

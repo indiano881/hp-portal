@@ -67,6 +67,7 @@ img:hover{
     transform: scale(1.1);
 }
 
+
 footer {
     background-color: var(--primary-color);
     border: var(--border-tycker);
@@ -75,6 +76,17 @@ footer {
     margin-right: 5%;
 }
 
+@media screen and (min-width: 700px) {
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    img {
+        max-width: 220px;
+        max-height: auto;
+    }
+    
+}
 
 @media screen and (min-width: 1000px) {
 
