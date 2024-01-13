@@ -94,11 +94,12 @@ footer {
     border: var(--border-tycker);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
 
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
+        margin: 5%;
     }
     .grid-item {
         max-width: none;
@@ -110,11 +111,12 @@ footer {
     
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
 
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
         gap: 15px;
+        margin: 3%;
     }
     img {
         max-width: 240px;
