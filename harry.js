@@ -1,5 +1,5 @@
 $(() => {
-
+    //books, movies, spells, potion, characters
     const API_URL="https://api.potterdb.com/v1/";
 
     const getData = async (url) => {
@@ -16,7 +16,7 @@ $(() => {
         $(booksArray).map((index, book)=> {
 
             let coverImage= book.attributes.cover;//imagine cover
-            $(".grid-container").append(`
+            $(".grid-container").empty().append(`
             <img src=${coverImage} id="picture${index}">
             `)
 

@@ -52,12 +52,19 @@ section {
 }
 
 .grid-container {
-    grid-template-columns: repeat(2, 1f);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10%;
+    gap: 5px;
 }
 
 img {
-    max-width: 80px;
+    max-width: 120px;
     max-height: auto;
+}
+
+img:hover{
+    transform: scale(1.1);
 }
 
 footer {
@@ -72,7 +79,11 @@ footer {
 @media screen and (min-width: 1000px) {
 
     .grid-container {
-        grid-template-columns: repeat(4, 1f);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    img {
+        max-width: 240px;
+        max-height: auto;
     }
     
 }
