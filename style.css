@@ -52,8 +52,10 @@ section {
 }
 
 .grid-container {
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     margin: 10%;
     gap: 5px;
 }

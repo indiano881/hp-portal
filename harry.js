@@ -15,9 +15,13 @@ $(() => {
     const renderBooks = books => {
         let booksArray=books.data;
         $(booksArray).map((index, book)=> {
-            let coverImage= book.attributes.cover;//imagine cover
+            let coverImage= book.attributes.cover;
+            let titleBook= book.attributes.title;
             $(".grid-container").append(`
+            <div>
             <img src=${coverImage} id="picture${index}">
+            <h3>${titleBook}</h3>
+            </div>
             `)
         })
     }
