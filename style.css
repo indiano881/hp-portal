@@ -7,7 +7,6 @@
     src: url(./tipography/harrypotter-ov4z-webfont.woff2);
 }
 
-
 :root {
     --primary-color: #8A4FFF;
     --secondary-color: #C3BEF7;
@@ -52,6 +51,7 @@ button {
     border: var(--border-tycker);
     border-radius: var(--sizing-standard);
     background-color: var(--terziary-color);
+    font-family: "harry-potter";
     font-size: calc(1rem + 1vw);
     padding: var(--sizing-small);
 }
