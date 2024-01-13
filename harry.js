@@ -19,8 +19,8 @@ $(() => {
             let titleBook= book.attributes.title;
             $(".grid-container").append(`
             <div>
-            <img src=${coverImage} id="picture${index}">
-            <h3>${titleBook}</h3>
+                <img src=${coverImage} id="picture${index}">
+                <h3>${titleBook}</h3>
             </div>
             `)
         })
@@ -29,9 +29,13 @@ $(() => {
     const renderMovies = movie => {
         let moviesArray=movie.data;
         $(moviesArray).map((index, movie)=> {
-            let posterImage= movie.attributes.poster;//imagine cover
+            let posterImage= movie.attributes.poster;
+            let titleMovie= movie.attributes.title;
             $(".grid-container").append(`
-            <img src=${posterImage} id="picture${index}">
+            <div>
+                <img src=${posterImage} id="picture${index}">
+                <h3>${titleMovie}</h3>
+            </div>
             `)
         })
     }
