@@ -1,14 +1,15 @@
 $(() => {
     //books, movies, spells, potion, characters
     const API_URL="https://api.potterdb.com/v1/";
+    const API_ENDPOINTS =["books","movies","spells","potion","characters"];
 
     const getData = async (url) => {
         
         let response = await fetch(url);
         let data = await response.json();
         console.log(data);
-        //renderBooks(data);
-        renderMovies(data);
+        return data;
+       
     }
 
     const renderBooks = books => {
@@ -40,10 +41,14 @@ $(() => {
 
 
     
-    $(".searchBtn").on("click", ()=> {
-        let userInput=$("#search-bar").val();//inserire regex?? o convertire in singoli bottoni??
-        getData(API_URL+userInput);
-        
+    $(".booksBtn").on("click", async()=> {
+        $(".grid-container").empty();
+        let booksData= await getData(API_URL+API_ENDPOINTS[0]);
+        renderBooks(booksData);
     })
-
+    $(".moviesBtn").on("click", async()=> {
+        $(".grid-container").empty();
+        let moviesData= await getData(API_URL+API_ENDPOINTS[1]);
+        renderMovies(moviesData);
+    })
 })
