@@ -64,6 +64,7 @@ section {
 
 .grid-item {
     padding: var(--sizing-standard);
+    max-width: 200px;
 }
 
 img {
@@ -98,6 +99,9 @@ footer {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
+    }
+    .grid-item {
+        max-width: none;
     }
     img {
         max-width: 220px;
