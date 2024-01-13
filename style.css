@@ -53,7 +53,7 @@ section {
 }
 
 .grid-container {
-    align-items: center;
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -62,7 +62,7 @@ section {
 }
 
 .grid-item {
-    
+    padding: var(--sizing-standard);
 }
 
 img {
