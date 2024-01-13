@@ -18,7 +18,7 @@ $(() => {
             let coverImage= book.attributes.cover;
             let titleBook= book.attributes.title;
             $(".grid-container").append(`
-            <div>
+            <div class="grid-item">
                 <img src=${coverImage} id="picture${index}">
                 <h3>${titleBook}</h3>
             </div>
@@ -32,7 +32,7 @@ $(() => {
             let posterImage= movie.attributes.poster;
             let titleMovie= movie.attributes.title;
             $(".grid-container").append(`
-            <div>
+            <div class="grid-item">
                 <img src=${posterImage} id="picture${index}">
                 <h3>${titleMovie}</h3>
             </div>
@@ -47,14 +47,14 @@ $(() => {
             let spellName= spell.attributes.name;
             if (spellImage){
                 $(".grid-container").append(`
-                <div>
+                <div class="grid-item">
                     <img src=${spellImage} id="picture${index}">
                     <h3>${spellName}</h3>
                 </div>
                 `)
             } else {
                 $(".grid-container").append(`
-                <div>
+                <div class="grid-item">
                     <img src="./images/magic.jpg" id="picture${index}">
                     <h3>${spellName}</h3>
                 </div>
