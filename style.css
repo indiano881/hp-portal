@@ -51,10 +51,28 @@ section {
     flex-grow: 1;
 }
 
+.grid-container {
+    grid-template-columns: repeat(2, 1f);
+}
+
+img {
+    max-width: 80px;
+    max-height: auto;
+}
+
 footer {
     background-color: var(--primary-color);
     border: var(--border-tycker);
     border-radius: var(--sizing-standard);
     margin-left: 5%;
     margin-right: 5%;
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1f);
+    }
+    
 }

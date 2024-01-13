@@ -7,16 +7,24 @@ $(() => {
         let response = await fetch(url);
         let data = await response.json();
         console.log(data);
-            
-        
+        renderBooks(data);
     }
 
 
-    const renderBooks = book => {
-        let coverImage= data.data[0].attributes.cover;//immaggine cover
-        $("article").append(`
-        <img src=${coverImage}>
-        `)
+    const renderBooks = books => {
+        let booksArray=books.data;
+        $(booksArray).map((index, book)=> {
+
+            let coverImage= book.attributes.cover;//imagine cover
+            $(".grid-container").append(`
+            <img src=${coverImage} id="picture${index}">
+            `)
+
+
+        })
+
+
+        
     }
     
     
