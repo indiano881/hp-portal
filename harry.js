@@ -43,14 +43,22 @@ $(() => {
     const renderSpells = spells => {
         let spellsArray=spells.data;
         $(spellsArray).map((index, spell)=> {
-            let spellImage= spell.attributes.image;//imagine cover
-
+            let spellImage= spell.attributes.image;
+            let spellName= spell.attributes.name;
             if (spellImage){
                 $(".grid-container").append(`
-                <img src=${spellImage} id="picture${index}">
+                <div>
+                    <img src=${spellImage} id="picture${index}">
+                    <h3>${spellName}</h3>
+                </div>
                 `)
             } else {
-                $(".grid-container").append(`<img src="./images/magic.jpg" id="picture${index}>`)
+                $(".grid-container").append(`
+                <div>
+                    <img src="./images/magic.jpg" id="picture${index}">
+                    <h3>${spellName}</h3>
+                </div>
+                `)
             }
         })
     }
