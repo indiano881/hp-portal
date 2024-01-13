@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "harry-potter";
+    src: url(./tipography/harrypotter-ov4z-webfont.woff);
+}
+@font-face {
+    font-family: "harry-potter";
+    src: url(./tipography/harrypotter-ov4z-webfont.woff2);
+}
+
+
 :root {
     --primary-color: #8A4FFF;
     --secondary-color: #C3BEF7;
@@ -7,6 +17,7 @@
     --sizing-standard: 16px;
     --sizing-small: 8px;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -19,7 +30,7 @@ body {
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "harry-potter", Georgia, Times, 'Times New Roman', serif;
     min-height: 100%;
     margin:0;
     text-align: center;
@@ -80,8 +91,6 @@ h1 {
     font-size: calc(1.5rem + 1.2vw);
     font-style: italic;
 }
-
-
 
 h3 {
     font-size: calc(1rem + 1vw);
