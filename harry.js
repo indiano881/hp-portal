@@ -55,7 +55,7 @@ $(() => {
                 <div class="grid-item">
                     <img src=${spellImage} id="picture${index}">
                     <h3>${spellName}</h3>
-                    <h4>Effect: ${spellEffect}</h4>
+                    <h4>${spellEffect}</h4>
                 </div>
                 `)
             } else {
@@ -63,7 +63,7 @@ $(() => {
                 <div class="grid-item">
                     <img src="./images/magic.jpg" id="picture${index}">
                     <h3>${spellName}</h3>
-                    <h4>Effect: ${spellEffect}</h4>
+                    <h4>${spellEffect}</h4>
                 </div>
                 `)
             }
@@ -121,15 +121,15 @@ The specifications will depend somewhat on your choice of API.
 Submit both a github pages link and a link to the repo.
 
 To achieve a Godkänt grade you must:
-connect to an API in a user fired event
-make a request for data
-handle the returned data in an efficient manner
-display more than one property of the returned data on the page >> DO IT!!!!
-the page must be responsive
+connect to an API in a user fired event ok
+make a request for data ok
+handle the returned data in an efficient manner ok
+display more than one property of the returned data on the page ok
+the page must be responsive WORKING ON IT
 To achieve a Välgodkänt grade you must complete the above and:
-Have correct error handling when fetching the data
-Append arguments to the request
-Multiple calls to the API - eg have a input field that will generate different arguments and a button that fires the request
-Semantic code
-A consistent code style
+Have correct error handling when fetching the data SOON HAVE TO DO
+Append arguments to the request DONE????
+Multiple calls to the API - eg have a input field that will generate different arguments and a button that fires the request DONE????
+Semantic code OK
+A consistent code style OK
 */
