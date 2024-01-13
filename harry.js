@@ -17,10 +17,12 @@ $(() => {
         $(booksArray).map((index, book)=> {
             let coverImage= book.attributes.cover;
             let titleBook= book.attributes.title;
+            let releaseDate= book.attributes.release_date;
             $(".grid-container").append(`
             <div class="grid-item">
                 <img src=${coverImage} id="picture${index}">
                 <h3>${titleBook}</h3>
+                <h4>Published: ${releaseDate}</h4>
             </div>
             `)
         })
