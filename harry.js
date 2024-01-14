@@ -4,11 +4,20 @@ $(() => {
     const API_ENDPOINTS =["books","movies","spells"];
 
     const getData = async (url) => {
+        try {
+
+            let response = await fetch(url);
+            if(!response.ok) {
+                throw new Error("Network response error: "+response.status);
+            }
+            let data = await response.json();
+            console.log(data);
+            return data;
+
+        } catch (error) {
+            $("section").empty().append(`<h3> Network request error: ${error}</h3>`)
+        }
         
-        let response = await fetch(url);
-        let data = await response.json();
-        console.log(data);
-        return data;
        
     }
 
