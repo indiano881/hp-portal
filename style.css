@@ -51,7 +51,7 @@ button {
     border: var(--border-tycker);
     border-radius: var(--sizing-standard);
     background-color: var(--terziary-color);
-    font-family: "harry-potter";
+    font-family: "harry-potter", Georgia, Times, 'Times New Roman', serif;
     font-size: calc(1rem + 1vw);
     padding: var(--sizing-small);
 }

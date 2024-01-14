@@ -2,6 +2,11 @@ $(() => {
     //books, movies, spells, potion, characters
     const API_URL="https://api.potterdb.com/v1/";
     const API_ENDPOINTS =["books","movies","spells"];
+    
+    const harryPotterSoundtrack= new Audio("./audio/MainTheme.mp3")
+    harryPotterSoundtrack.preload="auto";
+    
+    
 
     const getData = async (url) => {
         try {
@@ -86,16 +91,19 @@ $(() => {
 
     //Buttons handling
     $(".booksBtn").on("click", async()=> {
+        harryPotterSoundtrack.play();
         $(".grid-container").empty();
         let booksData= await getData(API_URL+API_ENDPOINTS[0]);
         renderBooks(booksData);
     })
     $(".moviesBtn").on("click", async()=> {
+        harryPotterSoundtrack.play();
         $(".grid-container").empty();
         let moviesData= await getData(API_URL+API_ENDPOINTS[1]);
         renderMovies(moviesData);
     })
     $(".spellsBtn").on("click", async()=> {
+        harryPotterSoundtrack.play();
         $(".grid-container").empty();
         let spellsData= await getData(API_URL+API_ENDPOINTS[2]);
         console.log(spellsData);
@@ -129,11 +137,11 @@ connect to an API in a user fired event ok
 make a request for data ok
 handle the returned data in an efficient manner ok
 display more than one property of the returned data on the page ok
-the page must be responsive WORKING ON IT
+the page must be responsive OK
 To achieve a Välgodkänt grade you must complete the above and:
-Have correct error handling when fetching the data SOON HAVE TO DO
-Append arguments to the request DONE????
-Multiple calls to the API - eg have a input field that will generate different arguments and a button that fires the request DONE????
+Have correct error handling when fetching the data OK
+Append arguments to the request OK
+Multiple calls to the API - eg have a input field that will generate different arguments and a button that fires the request OK
 Semantic code OK
 A consistent code style OK
 */
