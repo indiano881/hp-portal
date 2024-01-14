@@ -8,11 +8,14 @@
 }
 
 :root {
+    /*colors*/
     --primary-color: #8A4FFF;
     --secondary-color: #C3BEF7;
     --terziary-color: #EFFFFA;
+    /*border*/
     --border-main: 1px solid black;
     --border-tycker: 3px solid black;
+    /*sizing*/
     --sizing-standard: 16px;
     --sizing-small: 8px;
 }
@@ -30,10 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "harry-potter", Georgia, Times, 'Times New Roman', serif;
-    min-height: 100%;
     margin:0;
+    min-height: 100%;
     text-align: center;
 }
+
 nav {
     background-color: var(--primary-color);
     border: var(--border-tycker);
@@ -42,24 +46,26 @@ nav {
     justify-content: space-evenly;
     padding: var(--sizing-standard);
 }
+
 input {
     border: var(--border-tycker);
     border-radius: var(--sizing-standard);
     max-width: 100px;
 }
+
 button {
+    background-color: var(--terziary-color);
     border: var(--border-tycker);
     border-radius: var(--sizing-standard);
-    background-color: var(--terziary-color);
     font-family: "harry-potter", Georgia, Times, 'Times New Roman', serif;
     font-size: calc(1rem + 1vw);
     padding: var(--sizing-small);
 }
+
 button:hover {
     background-color: var(--secondary-color);
     transform: scale(1.1);
 }
-
 
 section {
     flex-grow: 1;
@@ -67,20 +73,20 @@ section {
 
 .grid-container {
     display: grid;
+    gap: 3px;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     margin: 10%;
-    gap: 3px;
 }
 
 .grid-item {
-    padding: var(--sizing-standard);
     max-width: 200px;
+    padding: var(--sizing-standard);
 }
 
 img {
-    max-width: 120px;
     max-height: auto;
+    max-width: 120px;
 }
 
 img:hover{
@@ -106,30 +112,31 @@ footer {
 @media screen and (min-width: 720px) {
 
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
         gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
         margin: 5%;
     }
+
     .grid-item {
         max-width: none;
     }
+
     img {
-        max-width: 220px;
         max-height: auto;
+        max-width: 220px;
     }
-    
 }
 
 @media screen and (min-width: 1100px) {
 
     .grid-container {
-        grid-template-columns: repeat(4, 1fr);
         gap: 15px;
+        grid-template-columns: repeat(4, 1fr);
         margin: 3%;
     }
+
     img {
-        max-width: 240px;
         max-height: auto;
+        max-width: 240px;
     }
-    
 }
